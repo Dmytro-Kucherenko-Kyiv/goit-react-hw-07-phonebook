@@ -19,10 +19,25 @@ export const App = (props) => {
 
     return (
       <Layout>
-        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', fontSize: 40, color: '#041934', backgroundColor: '#c3f5bf', }}>
+        <div style={{display: 'flex', 
+        flexDirection: 'column', 
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: 40,
+          color: '#041934',
+          backgroundColor: '#c3f5bf',
+        }}>
         <h1>Phonebook</h1>
         <ContactForm />
-          {isLoading && !error && <b>Request in progress...</b>}
+          {isLoading && !error &&
+              <b style={{ 
+              display: 'flex', 
+              justifyContent: 'center', 
+              alignItems: 'center', 
+              fontSize: 20, 
+              color: '#f0595b' }}>
+                Request in progress...
+            </b>}
         <h2>Contacts</h2>
         <Filter/>
         <ContactList/>
