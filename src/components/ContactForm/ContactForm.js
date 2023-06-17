@@ -22,10 +22,10 @@ const handleSubmit = e => {
   }
   else {
     dispatch(addContact({ id: nanoid(), name: e.target.name.value, number: e.target.number.value }));
-  }
 
-  setName('');
-  setNumber('');
+      setName('');
+      setNumber('');
+  }
 }
   
   const [name, setName] = useState('');
